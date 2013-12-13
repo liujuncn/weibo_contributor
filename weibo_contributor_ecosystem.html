@@ -168,11 +168,11 @@ function rander(tokens, is_user, user_cid) {
                     })
                     .on("mouseover", function (d, i) {
                         d3.select(this).style("fill", "gold");
-                        showToolTip(tokens[i] !== undefined ? tokens[i].tip : (user_cid === undefined ? data[0][i] : (data[0][i])), d.x + d3.mouse(this)[0] + 10, d.y + d3.mouse(this)[1], true);
+                        showToolTip(tokens[i] !== undefined ? tokens[i].tip : (user_cid === undefined ? data[0][i] : (data[0][i])), d.x + d3.mouse(this)[0] + 250, d.y + d3.mouse(this)[1], true);
                     })
                     .on("mousemove", function (d, i) {
 
-                        tooltipDivID.css({top: d.y + d3.mouse(this)[1], left: d.x + d3.mouse(this)[0] + 10});
+                        tooltipDivID.css({top: d.y + d3.mouse(this)[1] + 250, left: d.x + d3.mouse(this)[0] + 50});
                     })
                     .on("mouseout", function () {
                         d3.select(this).style("fill", function (d) {
